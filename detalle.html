@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script>
+function show(shown, hidden) {
+  document.getElementById(shown).style.display='block';
+  document.getElementById(hidden).style.display='none';
+  return false;
+}
+</script>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0">
 	<title>MIRU</title>
@@ -33,12 +40,12 @@
   </div>
 </nav>
 <!---letrero-->
-<h5 style="color: white;">hola</h5>
 <div class="container" ><h1>PLUTON</h1> </div>
 <h5 style="color: white;">hola</h5>
 <!---TABLA BASICA-->
 </div>
-<div class="col-lg-7"
+<div class = "row">
+<div class="col-sm-6"
   <div class="table-responsive">          
   <table class="table">
     <tbody>
@@ -80,7 +87,7 @@
     </div>
     <div class="col-sm">
        <img src="img/warningSinColor.jpeg" width="15" height="15">
-       <button type="button" class="btn btn-light">Garantia</button></a>
+       <button type="button" class="btn btn-light" onclick="return show('Page3','Page1');">Garantia</button></a>
     </div>
   </div>
 </div>
@@ -92,7 +99,7 @@
     </div>
     <div class="col-sm">
       <img src="img/okSincolor.jpeg" width="15" height="15">
-       <button type="button" class="btn btn-light">Disco Duro</button></a>
+       <button type="button" class="btn btn-light" onclick="return show('Page4','Page1');">Disco Duro</button></a>
     </div>
   </div>
 </div>
@@ -113,15 +120,117 @@
   <div class="row">
     <div class="col-sm">
     	<img src="img/errorSinColor.jpeg" width="15" height="15">
-    		<button type="button" class="btn btn-light">Temperatura</button> </a>
+    		<button type="button" class="btn btn-light" onclick="return show('Page2','Page1');" >Temperatura</button> </a>
     </div>
     <div class="col-sm">
-           <button type="button" class="btn btn-secondary">Agregar Más</button>
+           <button type="button" class="btn btn-secondary"  >Agregar Más</button>
    </a>
     </div>
   </div>
 </div>
 <h4 style="color: white;">hola</h4>
+	</div>
+	
+	<div class = "col-sm-6">
+		<div id = "Page1">
+			hola
+			
+		</div>
+		<div class = "center">
+		<div id = "Page2" style = "display:none">
+			
+			
+			
+			
+			<img src="img/descarga.png" width= "350" height= "350">
+			
+			
+			 <div class="table-responsive">   
+			 <table = frame = "box">
+				<tbody>
+				<tr>
+				<td>Promedio</td>
+				<td></td>
+				</tr>
+				<tr>
+				<td>Fallas en Total </td>
+				<td></td>
+				</tr>
+				<tr>
+				<td> Recomendaciones de Mantenimiento</td>
+				<td></td>
+				</tr>
+				<tr>
+				<td>Predicciones</td>
+				<td></td>
+				</tr>
+				</tbody>
+			 </table>
+			</div>
+		</div>
+				<div id = "Page3" style = "display:none">
+			
+			
+			
+			
+			<img src="img/descarga.png" width= "350" height= "350">
+			
+			
+			 <div class="table-responsive">   
+			 <table = frame = "box">
+				<tbody>
+				<tr>
+				<td>Promedio</td>
+				<td></td>
+				</tr>
+				<tr>
+				<td>Fallas en Total </td>
+				<td></td>
+				</tr>
+				<tr>
+				<td> Recomendaciones de Mantenimiento</td>
+				<td></td>
+				</tr>
+				<tr>
+				<td>Predicciones</td>
+				<td></td>
+				</tr>
+				</tbody>
+			 </table>
+			</div>
+		</div>
+				<div id = "Page4" style = "display:none">
+			
+			
+			
+			
+			<img src="img/descarga.png" width= "350" height= "350">
+			
+			
+			 <div class="table-responsive">   
+			 <table = frame = "box">
+				<tbody>
+				<tr>
+				<td>Promedio</td>
+				<td></td>
+				</tr>
+				<tr>
+				<td>Fallas en Total </td>
+				<td></td>
+				</tr>
+				<tr>
+				<td> Recomendaciones de Mantenimiento</td>
+				<td></td>
+				</tr>
+				<tr>
+				<td>Predicciones</td>
+				<td></td>
+				</tr>
+				</tbody>
+			 </table>
+			</div>
+		</div>
+	</div>
 	</div>
 	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="js/popper.min.js"></script>
