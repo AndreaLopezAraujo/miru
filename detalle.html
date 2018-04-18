@@ -14,6 +14,12 @@ function show(shown, hidden, hidden2, hidden3) {
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0">
 	<title>MIRU</title>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<style>
+	.center_image {
+display: block;
+margin-left: auto;
+margin-right: auto }
+	</style
 </head>
 <body>
 	<!---Barra navegadora-->
@@ -42,13 +48,14 @@ function show(shown, hidden, hidden2, hidden3) {
   </div>
 </nav>
 <!---letrero-->
-<div class="container" ><h1>PLUTON</h1> </div>
-<h5 style="color: white;">hola</h5>
+
 <!---TABLA BASICA-->
 </div>
 <div class = "row">
 <div class="col-sm-6"
-  <div class="table-responsive">          
+  <div class="table-responsive"> 
+<div class="container" ><h1>PLUTON</h1> </div>
+<h5 style="color: white;">hola</h5>
   <table class="table">
     <tbody>
       <tr>
@@ -136,36 +143,37 @@ function show(shown, hidden, hidden2, hidden3) {
 	
 	<div class = "col-sm-6">
 		<div id = "Page1">
-			hola
+		
 			
 		</div>
-		<div class = "center">
+		
+		
 		<div id = "Page2" style = "display:none">
 			
 			
 			
 			
-			<img src="img/descarga.png" width= "350" height= "350">
+			<img src="img/temperatura.jpg" width= "550" height= "380" class="center_image">
 			
 			
 			 <div class="table-responsive">   
-			 <table = frame = "box">
+			 <table border = "1" >
 				<tbody>
 				<tr>
-				<td>Promedio1</td>
-				<td></td>
+				<td>Promedio</td>
+				<td width="80%"> 19.71 Grados Celcius</td>
 				</tr>
 				<tr>
 				<td>Fallas en Total </td>
-				<td></td>
+				<td width="80%"> 5 fallas en total</td>
 				</tr>
 				<tr>
 				<td> Recomendaciones de Mantenimiento</td>
-				<td></td>
+				<td width="80%"> Compruebe si las ventilaciones estan funcionando correctamente, mire cuanta memoria y datos se estan usando</td>
 				</tr>
 				<tr>
 				<td>Predicciones</td>
-				<td></td>
+				<td width="80%"> Han habido 5 fallos, se estiman que despues de la medicion de hoy seguiran estos fallos, con mas concurrencia. </td>
 				</tr>
 				</tbody>
 			 </table>
@@ -173,67 +181,44 @@ function show(shown, hidden, hidden2, hidden3) {
 		</div>
 				<div id = "Page3" style = "display:none">
 			
-			
-			
-			
-			<img src="img/descarga.png" width= "350" height= "350">
-			
-			
-			 <div class="table-responsive">   
-			 <table = frame = "box">
-				<tbody>
-				<tr>
-				<td>Promedio2</td>
-				<td></td>
-				</tr>
-				<tr>
-				<td>Fallas en Total </td>
-				<td></td>
-				</tr>
-				<tr>
-				<td> Recomendaciones de Mantenimiento</td>
-				<td></td>
-				</tr>
-				<tr>
-				<td>Predicciones</td>
-				<td></td>
-				</tr>
-				</tbody>
-			 </table>
-			</div>
+			<center>
+			<img src="img/adv.jpg" width= "300" height= "200" class="center_image">
+			<h1>Advertencia</h1>
+			<h2> La licencia se le vencera en unos dias </h2>
+			</center>
 		</div>
 				<div id = "Page4" style = "display:none">
 			
 			
+				
 			
-			
-			<img src="img/descarga.png" width= "350" height= "350">
-			
-			
+			<img src="img/DiscoDuro.jpg" width= "550" height= "380" class="center_image">
+			<div class
+			<center>
 			 <div class="table-responsive">   
-			 <table = frame = "box">
+			 <table border="1">
 				<tbody>
 				<tr>
-				<td>Promedio3</td>
-				<td></td>
+				<td>Promedio</td>
+				<td width="99%"> Esta en un incremento exponencial - </td>
 				</tr>
 				<tr>
 				<td>Fallas en Total </td>
-				<td></td>
+				<td width="99%">Han habido 0 fallas</td>
 				</tr>
 				<tr>
 				<td> Recomendaciones de Mantenimiento</td>
-				<td></td>
+				<td width="99%"> Todo optimo</td>
 				</tr>
 				<tr>
 				<td>Predicciones</td>
-				<td></td>
+				<td width="99%"> No se estima ningun problema por el momento </td>
 				</tr>
 				</tbody>
 			 </table>
 			</div>
+			</center>
 		</div>
-	</div>
 	</div>
 	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="js/popper.min.js"></script>
