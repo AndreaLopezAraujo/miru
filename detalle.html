@@ -2,6 +2,108 @@
 <html lang="en">
 
 <head>
+	<title></title>
+	<script type="text/javascript" src="jquery-1.12.0.min.js"></script>
+	<script type="text/javascript" src="dist/Chart.bundle.min.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		var datos = {
+			type: "pie",
+			data : {
+				datasets :[{
+					data : [
+						5,
+						10,
+					],
+					backgroundColor: [
+						"#F7464A",
+						"#46BFBD",
+					],
+				}],
+				labels : [
+					"Espacio Ocupado",
+					"Espacio Disponible",
+				]
+			},
+			options : {
+				responsive : true,
+			}
+		};
+		var canvas = document.getElementById('chart').getContext('2d');
+		window.pie = new Chart(canvas, datos);
+		setInterval(function(){
+			datos.data.datasets.splice(0);
+			var newData = {
+				backgroundColor : [
+					"#F7464A",
+					"#46BFBD",
+				],
+				data : [getRandom(), getRandom()]
+			};
+			datos.data.datasets.push(newData);
+			window.pie.update();
+		}, 5000);
+		function getRandom(){
+			return Math.round(Math.random() * 100);
+		}
+	});
+	</script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		var datos = {
+			type: "line",
+			data : {
+				datasets :[{
+					data : [
+						18,
+						19,
+						20,
+						19,
+						20,
+						21,
+						21,
+						22,
+						21,
+						23,
+						24,
+						25,
+					],
+					label: 'Temperatura',
+				}],
+				labels : [
+				'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December',
+				]
+			},
+			options : {
+				responsive : true,
+			}
+		};
+		var canvas = document.getElementById('line').getContext('2d');
+		window.line = new Chart(canvas, datos);
+		setInterval(function(){
+			datos.data.datasets.splice(0);
+			var newData = {
+				data : [18,
+						19,
+						20,
+						19,
+						20,
+						21,
+						21,
+						22,
+						21,
+						23,
+						24, getRandom()],
+						label: 'Temperatura',
+			};
+			datos.data.datasets.push(newData);
+			window.line.update();
+		}, 5000);
+		function getRandom(){
+			return Math.round(Math.random() *(29-24)+24);
+		}
+	});
+	</script>
 	<script>
 function show(shown, hidden, hidden2, hidden3) {
   document.getElementById(shown).style.display='block';
@@ -38,9 +140,6 @@ function show(shown, hidden, hidden2, hidden3) {
 				<li class="nav-item active">
 					<a class="nav-link" href="#" onclick="window.location.href='index.html'" style="color: white;">Servidores <span class="sr-only">(current)</span></a>
 				</li>
-				<li class="nav-item">
-        <a class="nav-link" href="#" style="color: white;" onclick="window.location.href='vistaGlobal.html'">Vista global</a>
-      </li>
 				<li class="nav-item">
 					<a class="nav-link" href="#" onclick="window.location.href='ayuda.html'" style="color: white;">Ayuda</a>
 				</li>
@@ -159,11 +258,9 @@ function show(shown, hidden, hidden2, hidden3) {
 
 
 			<div id="Page2" style="display:none">
-
-
-
-
-				<img src="img/temperatura.jpg" width="550" height="380" class="center_image">
+				<div id="canvas-container" style="width:80%;">
+					<canvas id="line" width="500" height="350"></canvas>
+				</div>
 				<div class="col-sm-11">
 					<h1 style="color: white;">blanco</h1>
 					<table class="table">
@@ -191,20 +288,18 @@ function show(shown, hidden, hidden2, hidden3) {
 			<div id="Page3" style="display:none">
 
 				<center>
-          <h1 style="color: white;">Advertencia</h1>
 					<h1 style="color: white;">Advertencia</h1>
 					<h1 style="color: white;">Advertencia</h1>
-          <h1 style="color: white;">Advertencia</h1>
+					<h1 style="color: white;">Advertencia</h1>
+					<h1 style="color: white;">Advertencia</h1>
 					<h3> Su garantía vence el 10 de mayo de 2018</h3>
-          <h4> Consulte con su proveedor para mayor información</h4>
+					<h4> Consulte con su proveedor para mayor información</h4>
 				</center>
 			</div>
 			<div id="Page4" style="display:none">
-
-
-
-
-				<img src="img/DiscoDuro.jpg" width="550" height="380" class="center_image">
+				<div id="canvas-container" style="width:80%;">
+					<canvas id="chart" width="500" height="350"></canvas>
+				</div>
 				<div class="col-sm-11">
 					<h1 style="color: white;">blanco</h1>
 					<table class="table">
@@ -228,12 +323,10 @@ function show(shown, hidden, hidden2, hidden3) {
 						</tbody>
 					</table>
 				</div>
-
 			</div>
-		</div>
-		<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-		<script type="text/javascript" src="js/popper.min.js"></script>
-		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+			<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+			<script type="text/javascript" src="js/popper.min.js"></script>
+			<script type="text/javascript" src="js/bootstrap.min.js"></script>
 </body>
 
 </html>
