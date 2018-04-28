@@ -54,6 +54,70 @@
 		function getRandom(){
 			return Math.round(Math.random() * 100);
 		}
+	});
+	</script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		var datos = {
+			type: "line",
+			data : {
+				datasets :[{
+					data : [
+						18,
+						19,
+						20,
+						19,
+						20,
+						21,
+						21,
+						22,
+						21,
+						23,
+						24,
+						25,
+					],
+					label: 'Temperatura',
+				}],
+				labels : [
+				'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December',
+				]
+			},
+			options : {
+				responsive : true,
+			}
+		};
+
+		var canvas = document.getElementById('line').getContext('2d');
+		window.line = new Chart(canvas, datos);
+
+		setInterval(function(){
+			datos.data.datasets.splice(0);
+			var newData = {
+				data : [18,
+						19,
+						20,
+						19,
+						20,
+						21,
+						21,
+						22,
+						21,
+						23,
+						24, getRandom()],
+						label: 'Temperatura',
+			};
+
+			datos.data.datasets.push(newData);
+
+			window.line.update();
+
+		}, 5000);
+
+
+
+		function getRandom(){
+			return Math.round(Math.random() *(29-24)+24);
+		}
 
 
 	});
@@ -212,7 +276,9 @@ function show(shown, hidden, hidden2, hidden3) {
 
 
 			<div id="Page2" style="display:none">
-				###
+				<div id="canvas-container" style="width:80%;">
+				<canvas id="line" width="500" height="350"></canvas>
+				</div>
 				<div class="col-sm-11">
 					<h1 style="color: white;">blanco</h1>
 					<table class="table">
