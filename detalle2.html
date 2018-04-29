@@ -12,8 +12,8 @@
 			data : {
 				datasets :[{
 					data : [
-						5,
-						10,
+						8,
+						2,
 					],
 					backgroundColor: [
 						"#F7464A",
@@ -38,7 +38,7 @@
 					"#F7464A",
 					"#46BFBD",
 				],
-				data : [5+getRandom(), 10+getRandom()]
+				data : [8+getRandom(), 2+getRandom()]
 			};
 			datos.data.datasets.push(newData);
 			window.pie.update();
@@ -64,9 +64,9 @@
 						21,
 						22,
 						21,
-						23,
-						24,
-						25,
+						20,
+						19,
+						18,
 					],
 					label: 'Temperatura',
 					backgroundColor: ["#F89B9D",],
@@ -94,8 +94,8 @@
 						21,
 						22,
 						21,
-						23,
-						24, getRandom()],
+						20,
+						19, getRandom()],
 						label: 'Temperatura',
 						backgroundColor: ["#F89B9D",],
 					borderColor:["#F7464A"],
@@ -104,7 +104,7 @@
 			window.line.update();
 		}, 5000);
 		function getRandom(){
-			return Math.round(Math.random() *(29-24)+24);
+			return Math.round(Math.random() *(20-18)+18);
 		}
 	});
 	</script>
@@ -164,18 +164,18 @@ function show(shown, hidden, hidden2, hidden3) {
 	<div class="row">
 		<div class="col-sm-6" <div class="table-responsive">
 			<div class="container">
-				<h1>PLUTON</h1>
+				<h1>JUPITER</h1>
 			</div>
 			<h5 style="color: white;">hola</h5>
 			<table class="table">
 				<tbody>
 					<tr>
 						<td>IP</td>
-						<td>172.18.167.130</td>
+						<td>172.18.167.132</td>
 					</tr>
 					<tr>
 						<td>Tipo</td>
-						<td>VIRTUAL</td>
+						<td>FISICO</td>
 					</tr>
 					<tr>
 						<td>Sistema operativo</td>
@@ -183,7 +183,7 @@ function show(shown, hidden, hidden2, hidden3) {
 					</tr>
 					<tr>
 						<td>Procesador</td>
-						<td>2 VCPU</td>
+						<td>24 Core</td>
 					</tr>
 					<tr>
 						<td>Ubicación</td>
@@ -191,7 +191,7 @@ function show(shown, hidden, hidden2, hidden3) {
 					</tr>
 					<tr>
 						<td>Importancia</td>
-						<td>ALTA</td>
+						<td>MUY ALTA</td>
 					</tr>
 				</tbody>
 			</table>
@@ -208,7 +208,7 @@ function show(shown, hidden, hidden2, hidden3) {
 						<button type="button" class="btn" style="background-color: white; border-color: white;">Batería</button> </a>
 					</div>
 					<div class="col-sm">
-						<img src="img/warningSinColor.jpeg" width="15" height="15">
+						<img src="img/okSincolor.jpeg" width="15" height="15">
 						<button type="button" class="btn" style="background-color: white; border-color: white;" onclick="return show('Page3','Page4', 'Page2', 'Page5');">Garantia</button></a>
 					</div>
 				</div>
@@ -241,7 +241,7 @@ function show(shown, hidden, hidden2, hidden3) {
 			<div class="container">
 				<div class="row">
 					<div class="col-sm">
-						<img src="img/errorSinColor.jpeg" width="15" height="15">
+						<img src="img/okSincolor.jpeg" width="15" height="15">
 						<button type="button" class="btn" style="background-color: white; border-color: white;" onclick="return show('Page2','Page4','Page5','Page3');">Temperatura</button></a>
 					</div>
 					<div class="col-sm">
@@ -271,19 +271,19 @@ function show(shown, hidden, hidden2, hidden3) {
 						<tbody>
 							<tr>
 								<td>Promedio</td>
-								<td>19.71 °C</td>
+								<td>19.8 °C</td>
 							</tr>
 							<tr>
 								<td>Fallas en total</td>
-								<td>5</td>
+								<td>0</td>
 							</tr>
 							<tr>
 								<td>Recomendaciones de mantenimiento</td>
-								<td>Compruebe que la ventilación esté funcionando correctamente, consulte el uso de RAM</td>
+								<td>Se debe de tener presente que hubo un pico cerca del limite recomendado</td>
 							</tr>
 							<tr>
 								<td>Predicciones</td>
-								<td>Se estima que los fallos continuarán con mayor frecuencia</td>
+								<td>Se espera que no se genere ninguna falla en los proximos dos años.</td>
 							</tr>
 						</tbody>
 					</table>
@@ -296,7 +296,7 @@ function show(shown, hidden, hidden2, hidden3) {
 					<h1 style="color: white;">Advertencia</h1>
 					<h1 style="color: white;">Advertencia</h1>
           <h1 style="color: white;">Advertencia</h1>
-					<h3> Su garantía vence el 10 de mayo de 2018</h3>
+					<h3> Su garantía vence el 10 de mayo de 2019</h3>
           <h4> Consulte con su proveedor para mayor información</h4>
 				</center>
 			</div>
@@ -311,7 +311,7 @@ function show(shown, hidden, hidden2, hidden3) {
 						<tbody>
 							<tr>
 								<td>Promedio</td>
-								<td></td>
+								<td>80%</td>
 							</tr>
 							<tr>
 								<td>Fallas en total</td>
@@ -319,11 +319,11 @@ function show(shown, hidden, hidden2, hidden3) {
 							</tr>
 							<tr>
 								<td>Recomendaciones de mantenimiento</td>
-								<td>No hay recomendaciones por el momento</td>
+								<td>Se recomienda realizar manetenimiento al disco duro dentro de 3 meses </td>
 							</tr>
 							<tr>
 								<td>Predicciones</td>
-								<td>Próximamente no se presentarán fallos</td>
+								<td>Se espera que dentro de dos años el 90% del disco duro este siendo utilizado</td>
 							</tr>
 						</tbody>
 					</table>
@@ -343,39 +343,39 @@ function show(shown, hidden, hidden2, hidden3) {
 					</tr>
 					<tr>
 						<td></td>
-						<td>15/12/2012</td>
-						<td>Instalacion nueva</td>
+						<td>15/12/2013</td>
+						<td>Precarga de bases de datos</td>
 						<td>Se recibe el servidor Funcionando correctamente.</td>
 					</tr>
 					<tr>
 						<td></td>
-						<td>27/01/2013</td>
-						<td>Cambio a servidor primario</td>
-						<td>Se realiza la ventana de mantenmiento y se realiza el cambio según conograma.</td>
+						<td>1/06/2013</td>
+						<td>Instalacion de bases de datos productiva</td>
+						<td>Se instala el primer backup funciona correctamente.</td>
 					</tr>
 					<tr>
 						<td></td>
-						<td>4/02/2013</td>
-						<td>Bloqueo general de servidor</td>
-						<td>Se reinicia el servidor debido a bloqueo general. No hubo alarmas.</td>
+						<td>21/08/2013</td>
+						<td>No se podia acceder al servidor desde la VPN</td>
+						<td>migracion de datacenter - OK</td>
 					</tr>
 					<tr>
 						<td></td>
-						<td>18/04/2013</td>
-						<td>Bloqueo general de servidor</td>
-						<td>Se reinicia el servidor debido a bloqueo general. No hubo alarmas.</td>
+						<td>20/12/2015</td>
+						<td>Instalacion de actualizaciones de sistema operativo</td>
+						<td>Se crea una ruta estática con la direccion del firewall.</td>
 					</tr>
 					<tr>
 						<td></td>
-						<td>8/12/2013</td>
-						<td>Bloqueo general de servidor</td>
-						<td>El Datacenter arregla el servicio. Se solicita informe. Duracion: 20 minutos.</td>
+						<td>2/03/2016</td>
+						<td>Reinicio Abrupto del servidor</td>
+						<td>No hay una respuesta contundente de la causa de esta falla por parte del Datacenter.</td>
 					</tr>
 					<tr>
 						<td></td>
-						<td>30/08/2013</td>
-						<td>Creacion subdominio CNAME</td>
-						<td>Se creó el subdominio aprende.altipal.com.co para alcanzarlo desde la red con dominio altipal.com.co</td>
+						<td>7/04/2016</td>
+						<td>Cambio de nodo de la instancia JUPITERSQL\LOGICOM</td>
+						<td>Según informe de Datacenter el disco U generó un crash en la instancia motivo por el cual cambió de nodo</td>
 					</tr>
 	</table>
 	<center><button type="button" class="btn btn-secondary">Agregar Más</button></center>
