@@ -6,6 +6,111 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0">
 	<title>MIRU</title>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<script type="text/javascript" src="jquery-1.12.0.min.js"></script>
+	<script type="text/javascript" src="dist/Chart.bundle.min.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		var datos = {
+			type: "pie",
+			data : {
+				datasets :[{
+					data : [
+						5,
+						3,
+						2,
+					],
+					backgroundColor: [
+						"#68CA53",
+						"#D5D22B",
+						"#C12B07",
+					],
+				}],
+				labels : [
+					"Funciona Perfectamente",
+					"Se encuentran advertencias",
+					"Hay fallos en el sistema"
+				]
+			},
+			options : {
+				responsive : true,
+			}
+		};
+		var canvas = document.getElementById('chart').getContext('2d');
+		window.pie = new Chart(canvas, datos);
+	});
+	</script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		var datos = {
+			type: "line",
+			data : {
+				datasets :[{
+					data : [
+						2,
+						3,
+						5,
+						6,
+						3,
+						2,
+						1,
+						4,
+						6,
+						7,
+						6,
+						5,
+					],
+					label: 'advertencias',
+					backgroundColor: ["#F0EE76",],
+					borderColor:["#D5D22B"],
+				}],
+				labels : [
+				'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December',
+				]
+			},
+			options : {
+				responsive : true,
+			}
+		};
+		var canvas = document.getElementById('line').getContext('2d');
+		window.line = new Chart(canvas, datos);
+	});
+	</script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		var datos = {
+			type: "line",
+			data : {
+				datasets :[{
+					data : [
+						1,
+						3,
+						4,
+						5,
+						2,
+						5,
+						1,
+						5,
+						4,
+						3,
+						1,
+						4,
+					],
+					label: 'Fallos',
+					backgroundColor: ["#C8654E",],
+					borderColor:["#C12B07"],
+				}],
+				labels : [
+				'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December',
+				]
+			},
+			options : {
+				responsive : true,
+			}
+		};
+		var canvas = document.getElementById('line2').getContext('2d');
+		window.line = new Chart(canvas, datos);
+	});
+	</script>
 </head>
 
 <body>
@@ -44,10 +149,38 @@
 <h5 style="color: white; ">hola</h5>
 <div class="container " ><h1>ALTIPAL</h1> </div>
 <h5 style="color: white; ">hola</h5>
-<h1 style="color:white; ">espacio</h1>
-	<h3 style="color:white; ">espacio</h3>
-	<h3 style="color:white; ">espacio</h3>
-
+<!---Graficas-->
+	<h5 style="color: white; ">hola</h5>
+	<!---Anuncios-->
+	<div class="container">
+		<div class="row">
+			<div class="col-sm">
+				<center><img src="img/okSincolor.jpeg" width="40" height="40"></a>
+				</center>
+			</div>
+			<div class="col-sm">
+				<center><img src="img/warningSinColor.jpeg" width="42" height="40"></a>
+				</center>
+			</div>
+			<div class="col-sm">
+				<center><img src="img/errorSinColor.jpeg" width="42" height="40"></a>
+				</center>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm">
+				<center>Sistema funcionando correctamente</center>
+			</div>
+			<div class="col-sm">
+				<center> Puede presentarse un problema a futuro</center>
+			</div>
+			<div class="col-sm">
+				<center>Se encuentran fallos en el sistema</center>
+			</div>
+		</div>
+		<h1 style="color: white;">hola</h1>
 <!---Bolitas-->
 <div class="container ">
 <div class="row ">
@@ -95,7 +228,7 @@
    				 	</h4>
 					</center>
 							<center>
-   				 	<button class="btn " style="background-color:light-gray; ">Ver detalles</button>
+   				 	<button class="btn " style="background-color:light-gray; "  onclick="window.location.href='detalle2.html' ">Ver detalles</button>
 							</center>
   				</div> 
 			</div>
@@ -238,6 +371,36 @@
 		</div>
 </div>
 </div>
+<h5 style="color: white; ">hola</h5>
+<!---Graficas-->
+	<h5 style="color: white; ">hola</h5>
+<div class="container">
+		<div class="row">
+			<div class="col-sm">
+				<center>
+					<div id="canvas-container">
+					<canvas id="chart" width="50" height="50"></canvas>
+					</div>
+				</center>
+			</div>
+			<div class="col-sm">
+				<center>
+				<div id="canvas-container" >
+				<canvas id="line" width="50" height="50"></canvas>
+				</div>
+				</center>
+			</div>
+			<div class="col-sm">
+				<center>
+				<h5 style="color: white; ">hola</h5>
+				<div class="col-sm">
+				<div id="canvas-container">
+				<canvas id="line2" width="50" height="50"></canvas>
+				</div>
+				</center>
+			</div>
+		</div>
+	</div>
 	<script type="text/javascript " src="js/jquery-3.3.1.min.js "></script>
 	<script type="text/javascript " src="js/popper.min.js "></script>
 	<script type="text/javascript " src="js/bootstrap.min.js "></script>
