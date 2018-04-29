@@ -12,10 +12,11 @@
 .tooltip-wrap .tooltip-content {
   display: none;
   position: absolute;
-  bottom: 5%;
-  left: 5%;
-  right: 5%;
-  background-color: #fff;
+  top:0.1%;
+  bottom: 0.1%;
+  left: 0.1%;
+  right: 0.1%;
+  background-color: #FFF;
   padding: .5em;
 }
 .tooltip-wrap:hover .tooltip-content {
