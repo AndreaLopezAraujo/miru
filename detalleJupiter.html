@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title></title>
+	<script type="text/javascript" src="jquery-1.12.0.min.js"></script>
+	<script type="text/javascript" src="dist/Chart.bundle.min.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		var datos = {
+			type: "pie",
+			data : {
+				datasets :[{
+					data : [
+						8,
+						2,
+					],
+					backgroundColor: [
+						"#F7464A",
+						"#46BFBD",
+					],
+				}],
+				labels : [
+					"Espacio Ocupado",
+					"Espacio Disponible",
+				]
+			},
+			options : {
+				responsive : true,
+			}
+		};
+		var canvas = document.getElementById('chart').getContext('2d');
+		window.pie = new Chart(canvas, datos);
+		setInterval(function(){
+			datos.data.datasets.splice(0);
+			var newData = {
+				backgroundColor : [
+					"#F7464A",
+					"#46BFBD",
+				],
+				data : [8+getRandom(), 2+getRandom()]
+			};
+			datos.data.datasets.push(newData);
+			window.pie.update();
+		}, 5000);
+		function getRandom(){
+			return Math.round(Math.random() *(5-1)+1);
+		}
+	});
+	</script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		var datos = {
+			type: "line",
+			data : {
+				datasets :[{
+					data : [
+						18,
+						19,
+						20,
+						19,
+						20,
+						21,
+						21,
+						22,
+						21,
+						20,
+						19,
+						18,
+					],
+					label: 'Temperatura',
+					backgroundColor: ["#95CA8A",],
+					borderColor:["#68CA53"],
+				}],
+				labels : [
+				'Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre',
+				]
+			},
+			options : {
+				responsive : true,
+			}
+		};
+		var canvas = document.getElementById('line').getContext('2d');
+		window.line = new Chart(canvas, datos);
+		setInterval(function(){
+			datos.data.datasets.splice(0);
+			var newData = {
+				data : [18,
+						19,
+						20,
+						19,
+						20,
+						21,
+						21,
+						22,
+						21,
+						20,
+						19, getRandom()],
+						label: 'Temperatura',
+						backgroundColor: ["#95CA8A",],
+					borderColor:["#68CA53"],
+			};
+			datos.data.datasets.push(newData);
+			window.line.update();
+		}, 5000);
+		function getRandom(){
+			return Math.round(Math.random() *(20-18)+18);
+		}
+	});
+	</script>
+	<script>
+function show(shown, hidden, hidden2, hidden3) {
+  document.getElementById(shown).style.display='block';
+  document.getElementById(hidden).style.display='none';
+  document.getElementById(hidden2).style.display='none';
+  document.getElementById(hidden3).style.display='none';
+  return false;
+}
+</script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0">
+	<title>MIRU</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<style>
+		.center_image {
+			display: block;
+			margin-left: auto;
+			margin-right: auto
+		}
+	</style>
+</head>
+
+<body>
+	<!---Barra navegadora-->
+	<nav class="navbar navbar-expand-lg navbar-light " style="background-color: #1E3847;">
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01"
+			aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+		<div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+			<a class="navbar-brand" href="#" style="color: white;">
+				<img src="img/captura.png" width="45" height="40" class="d-inline-block align-top" alt=""></a>
+			<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+				<li class="nav-item active">
+					<a class="nav-link" href="#" onclick="window.location.href='index.html'" style="color: white;">Servidores <span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#" style="color: white;" onclick="window.location.href='vistaGlobal.html'">Vista global</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#" onclick="window.location.href='ayuda.html'" style="color: white;">Ayuda</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#" onclick="window.location.href='login.html'" style="color: white;">Salir</a>
+				</li>
+			</ul>
+			<form class="form-inline my-2 my-lg-0">
+				<input class="form-control mr-sm-2" type="search" placeholder="Nombre o id" aria-label="Search">
+				<button class="btn my-2 my-sm-0" type="submit" style="border-color: white; background-color: #1E3847; color: white">Buscar</button>
+			</form>
+		</div>
+	</nav>
+<!---TABLA BASICA-->
+	<div class="row">
+		<div class="col-sm-6" <div class="table-responsive">
+			<div class="container">
+				<h1>JUPITER</h1>
+			</div>
+			<h5 style="color: white;">hola</h5>
+			<table class="table">
+				<tbody>
+					<tr>
+						<td>IP</td>
+						<td>172.18.167.132</td>
+					</tr>
+					<tr>
+						<td>Tipo</td>
+						<td>FISICO</td>
+					</tr>
+					<tr>
+						<td>Sistema operativo</td>
+						<td>Windows server 2018 R2 Standard</td>
+					</tr>
+					<tr>
+						<td>Procesador</td>
+						<td>24 Core</td>
+					</tr>
+					<tr>
+						<td>Ubicación</td>
+						<td>DATACENTER</td>
+					</tr>
+					<tr>
+						<td>Importancia</td>
+						<td>MUY ALTA</td>
+					</tr>
+				</tbody>
+			</table>
+			<!---hoja de vida-->
+			<h4 style="color: white;">hola</h4>
+			<div class="container">
+				<h2>Hoja de vida</h2>
+			</div>
+			<h4 style="color: white;">hola</h4>
+			<div class="container">
+				<div class="row">
+					<div class="col-sm">
+						<img src="img/okSincolor.jpeg" width="15" height="15">
+						<button type="button" class="btn" style="background-color: white; border-color: white;">Batería</button> </a>
+					</div>
+					<div class="col-sm">
+						<img src="img/okSincolor.jpeg" width="15" height="15">
+						<button type="button" class="btn" style="background-color: white; border-color: white;" onclick="return show('Page3','Page4', 'Page2', 'Page5');">Garantia</button></a>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-sm">
+						<img src="img/okSincolor.jpeg" width="15" height="15">
+						<button type="button" class="btn" style="background-color: white; border-color: white;">RAM</button> </a>
+					</div>
+					<div class="col-sm">
+						<img src="img/okSincolor.jpeg" width="15" height="15">
+						<button type="button" class="btn" style="background-color: white; border-color: white;" onclick="return show('Page4','Page5','Page2', 'Page3');">Disco Duro</button></a>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-sm">
+						<img src="img/okSincolor.jpeg" width="15" height="15">
+						<button type="button" class="btn" style="background-color: white; border-color: white;" onclick="return show('Page5','Page4','Page2','Page3');">Historial de Cambios</button>						</a>
+					</div>
+					<div class="col-sm">
+						<img src="img/okSincolor.jpeg" width="15" height="15">
+						<button type="button" class="btn" style="background-color: white; border-color: white;">Banda Ancha</button>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-sm">
+						<img src="img/okSincolor.jpeg" width="15" height="15">
+						<button type="button" class="btn" style="background-color: white; border-color: white;" onclick="return show('Page2','Page4','Page5','Page3');">Temperatura</button></a>
+					</div>
+					<div class="col-sm">
+						<h1></h1>
+						<button type="button" class="btn btn-secondary">Agregar Más</button>
+						</a>
+					</div>
+				</div>
+			</div>
+			<h4 style="color: white;">hola</h4>
+		</div>
+
+		<div class="col-sm-6">
+			<div id="Page1">
+
+
+			</div>
+
+
+			<div id="Page2" style="display:none">
+				<div id="canvas-container" style="width:80%;">
+				<canvas id="line" width="500" height="350"></canvas>
+				</div>
+				<div class="col-sm-11">
+					<h1 style="color: white;">blanco</h1>
+					<table class="table">
+						<tbody>
+							<tr>
+								<td>Promedio</td>
+								<td>19.8 °C</td>
+							</tr>
+							<tr>
+								<td>Fallas en total</td>
+								<td>0</td>
+							</tr>
+							<tr>
+								<td>Recomendaciones de mantenimiento</td>
+								<td>Se debe de tener presente que hubo un pico cerca del limite recomendado</td>
+							</tr>
+							<tr>
+								<td>Predicciones</td>
+								<td>Se espera que no se genere ninguna falla en los proximos dos años.</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div id="Page3" style="display:none">
+
+				<center>
+          <h1 style="color: white;">Advertencia</h1>
+					<h1 style="color: white;">Advertencia</h1>
+					<h1 style="color: white;">Advertencia</h1>
+          <h1 style="color: white;">Advertencia</h1>
+					<h3> Su garantía vence el 10 de mayo de 2019</h3>
+          <h4> Consulte con su proveedor para mayor información</h4>
+				</center>
+			</div>
+			
+<div id="Page4" style="display:none">
+			<div id="canvas-container" style="width:80%;">
+		<canvas id="chart" width="500" height="350"></canvas>
+		</div>
+				<div class="col-sm-11">
+					<h1 style="color: white;">blanco</h1>
+					<table class="table">
+						<tbody>
+							<tr>
+								<td>Promedio</td>
+								<td>80%</td>
+							</tr>
+							<tr>
+								<td>Fallas en total</td>
+								<td>0</td>
+							</tr>
+							<tr>
+								<td>Recomendaciones de mantenimiento</td>
+								<td>Se recomienda realizar manetenimiento al disco duro dentro de 3 meses </td>
+							</tr>
+							<tr>
+								<td>Predicciones</td>
+								<td>Se espera que dentro de dos años el 90% del disco duro este siendo utilizado</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+<div id="Page5" style="display:none">
+			<div>
+	<h5 style="color: white;">hola</h5>
+	<table class="table">
+					<tr>
+                    <th></th>
+					<th>Fecha</th>
+					<th>Motivo</th>
+					<th>Resultado</th>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>15/12/2013</td>
+						<td>Precarga de bases de datos</td>
+						<td>Se recibe el servidor Funcionando correctamente.</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>1/06/2013</td>
+						<td>Instalacion de bases de datos productiva</td>
+						<td>Se instala el primer backup funciona correctamente.</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>21/08/2013</td>
+						<td>No se podia acceder al servidor desde la VPN</td>
+						<td>migracion de datacenter - OK</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>20/12/2015</td>
+						<td>Instalacion de actualizaciones de sistema operativo</td>
+						<td>Se crea una ruta estática con la direccion del firewall.</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>2/03/2016</td>
+						<td>Reinicio Abrupto del servidor</td>
+						<td>No hay una respuesta contundente de la causa de esta falla por parte del Datacenter.</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>7/04/2016</td>
+						<td>Cambio de nodo de la instancia JUPITERSQL\LOGICOM</td>
+						<td>Según informe de Datacenter el disco U generó un crash en la instancia motivo por el cual cambió de nodo</td>
+					</tr>
+	</table>
+	<center><button type="button" class="btn btn-secondary">Agregar Más</button></center>
+</div>
+			</div>
+		<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="js/popper.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<!---letrero-->
+
+</body>
+
+</html>

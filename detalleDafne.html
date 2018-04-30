@@ -12,8 +12,8 @@
 			data : {
 				datasets :[{
 					data : [
-						8,
-						2,
+						95,
+						5,
 					],
 					backgroundColor: [
 						"#F7464A",
@@ -31,21 +31,6 @@
 		};
 		var canvas = document.getElementById('chart').getContext('2d');
 		window.pie = new Chart(canvas, datos);
-		setInterval(function(){
-			datos.data.datasets.splice(0);
-			var newData = {
-				backgroundColor : [
-					"#F7464A",
-					"#46BFBD",
-				],
-				data : [8+getRandom(), 2+getRandom()]
-			};
-			datos.data.datasets.push(newData);
-			window.pie.update();
-		}, 5000);
-		function getRandom(){
-			return Math.round(Math.random() *(5-1)+1);
-		}
 	});
 	</script>
 	<script type="text/javascript">
@@ -55,25 +40,25 @@
 			data : {
 				datasets :[{
 					data : [
-						18,
-						19,
+						24,
+						22,
 						20,
 						19,
 						20,
-						21,
+						25,
 						21,
 						22,
-						21,
+						20,
+						23,
 						20,
 						19,
-						18,
 					],
 					label: 'Temperatura',
-					backgroundColor: ["#95CA8A",],
-					borderColor:["#68CA53"],
+					backgroundColor: ["#F89B9D",],
+					borderColor:["#F7464A"],
 				}],
 				labels : [
-				'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December',
+				'Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre',
 				]
 			},
 			options : {
@@ -94,17 +79,17 @@
 						21,
 						22,
 						21,
-						20,
-						19, getRandom()],
+						23,
+						24, getRandom()],
 						label: 'Temperatura',
-						backgroundColor: ["#95CA8A",],
-					borderColor:["#68CA53"],
+						backgroundColor: ["#F89B9D",],
+					borderColor:["#F7464A"],
 			};
 			datos.data.datasets.push(newData);
 			window.line.update();
 		}, 5000);
 		function getRandom(){
-			return Math.round(Math.random() *(20-18)+18);
+			return Math.round(Math.random() *(29-24)+24);
 		}
 	});
 	</script>
@@ -164,26 +149,26 @@ function show(shown, hidden, hidden2, hidden3) {
 	<div class="row">
 		<div class="col-sm-6" <div class="table-responsive">
 			<div class="container">
-				<h1>JUPITER</h1>
+				<h1>DAFNE</h1>
 			</div>
 			<h5 style="color: white;">hola</h5>
 			<table class="table">
 				<tbody>
 					<tr>
 						<td>IP</td>
-						<td>172.18.167.132</td>
+						<td>172.18.167.148</td>
 					</tr>
 					<tr>
 						<td>Tipo</td>
-						<td>FISICO</td>
+						<td>VIRTUAL</td>
 					</tr>
 					<tr>
 						<td>Sistema operativo</td>
-						<td>Windows server 2018 R2 Standard</td>
+						<td>Windows server 2008 R2 Standard</td>
 					</tr>
 					<tr>
 						<td>Procesador</td>
-						<td>24 Core</td>
+						<td>2 VCPU</td>
 					</tr>
 					<tr>
 						<td>Ubicación</td>
@@ -191,7 +176,7 @@ function show(shown, hidden, hidden2, hidden3) {
 					</tr>
 					<tr>
 						<td>Importancia</td>
-						<td>MUY ALTA</td>
+						<td>ALTA</td>
 					</tr>
 				</tbody>
 			</table>
@@ -208,8 +193,8 @@ function show(shown, hidden, hidden2, hidden3) {
 						<button type="button" class="btn" style="background-color: white; border-color: white;">Batería</button> </a>
 					</div>
 					<div class="col-sm">
-						<img src="img/okSincolor.jpeg" width="15" height="15">
-						<button type="button" class="btn" style="background-color: white; border-color: white;" onclick="return show('Page3','Page4', 'Page2', 'Page5');">Garantia</button></a>
+						<img src="img/okSinColor.jpeg" width="15" height="15">
+						<button type="button" class="btn" style="background-color: white; border-color: white;" onclick="return show('Page3','Page5','Page4','Page2');" >Garantia</button></a>
 					</div>
 				</div>
 			</div>
@@ -220,7 +205,7 @@ function show(shown, hidden, hidden2, hidden3) {
 						<button type="button" class="btn" style="background-color: white; border-color: white;">RAM</button> </a>
 					</div>
 					<div class="col-sm">
-						<img src="img/okSincolor.jpeg" width="15" height="15">
+						<img src="img/warningSincolor.jpeg" width="15" height="15">
 						<button type="button" class="btn" style="background-color: white; border-color: white;" onclick="return show('Page4','Page5','Page2', 'Page3');">Disco Duro</button></a>
 					</div>
 				</div>
@@ -241,8 +226,8 @@ function show(shown, hidden, hidden2, hidden3) {
 			<div class="container">
 				<div class="row">
 					<div class="col-sm">
-						<img src="img/okSincolor.jpeg" width="15" height="15">
-						<button type="button" class="btn" style="background-color: white; border-color: white;" onclick="return show('Page2','Page4','Page5','Page3');">Temperatura</button></a>
+						<img src="img/okSinColor.jpeg" width="15" height="15">
+						<button type="button" class="btn" style="background-color: white; border-color: white;">Temperatura</button></a>
 					</div>
 					<div class="col-sm">
 						<h1></h1>
@@ -271,19 +256,19 @@ function show(shown, hidden, hidden2, hidden3) {
 						<tbody>
 							<tr>
 								<td>Promedio</td>
-								<td>19.8 °C</td>
+								<td>19.71 °C</td>
 							</tr>
 							<tr>
 								<td>Fallas en total</td>
-								<td>0</td>
+								<td>5</td>
 							</tr>
 							<tr>
 								<td>Recomendaciones de mantenimiento</td>
-								<td>Se debe de tener presente que hubo un pico cerca del limite recomendado</td>
+								<td>Compruebe que la ventilación esté funcionando correctamente, consulte el uso de RAM</td>
 							</tr>
 							<tr>
 								<td>Predicciones</td>
-								<td>Se espera que no se genere ninguna falla en los proximos dos años.</td>
+								<td>Se estima que los fallos continuarán con mayor frecuencia</td>
 							</tr>
 						</tbody>
 					</table>
@@ -296,7 +281,7 @@ function show(shown, hidden, hidden2, hidden3) {
 					<h1 style="color: white;">Advertencia</h1>
 					<h1 style="color: white;">Advertencia</h1>
           <h1 style="color: white;">Advertencia</h1>
-					<h3> Su garantía vence el 10 de mayo de 2019</h3>
+					<h3> Su garantía vence el 15 de diciembre de 2018</h3>
           <h4> Consulte con su proveedor para mayor información</h4>
 				</center>
 			</div>
@@ -311,7 +296,7 @@ function show(shown, hidden, hidden2, hidden3) {
 						<tbody>
 							<tr>
 								<td>Promedio</td>
-								<td>80%</td>
+								<td>95%</td>
 							</tr>
 							<tr>
 								<td>Fallas en total</td>
@@ -319,11 +304,11 @@ function show(shown, hidden, hidden2, hidden3) {
 							</tr>
 							<tr>
 								<td>Recomendaciones de mantenimiento</td>
-								<td>Se recomienda realizar manetenimiento al disco duro dentro de 3 meses </td>
+								<td>Aumente el espacio en disco migrando información a otros servidores</td>
 							</tr>
 							<tr>
 								<td>Predicciones</td>
-								<td>Se espera que dentro de dos años el 90% del disco duro este siendo utilizado</td>
+								<td>El disco duro no tendrá espacio disponible en 3 meses</td>
 							</tr>
 						</tbody>
 					</table>
@@ -343,39 +328,27 @@ function show(shown, hidden, hidden2, hidden3) {
 					</tr>
 					<tr>
 						<td></td>
-						<td>15/12/2013</td>
-						<td>Precarga de bases de datos</td>
+						<td>15/12/2012</td>
+						<td>Instalacion nueva</td>
 						<td>Se recibe el servidor Funcionando correctamente.</td>
 					</tr>
 					<tr>
 						<td></td>
-						<td>1/06/2013</td>
-						<td>Instalacion de bases de datos productiva</td>
-						<td>Se instala el primer backup funciona correctamente.</td>
-					</tr>
-					<tr>
-						<td></td>
-						<td>21/08/2013</td>
-						<td>No se podia acceder al servidor desde la VPN</td>
-						<td>migracion de datacenter - OK</td>
-					</tr>
-					<tr>
-						<td></td>
 						<td>20/12/2015</td>
-						<td>Instalacion de actualizaciones de sistema operativo</td>
-						<td>Se crea una ruta estática con la direccion del firewall.</td>
+						<td>Instalación de actualizaciones de sistema operativo</td>
+						<td>Se instalaron todas las actualizaciones hasta la fecha existosamente.</td>
 					</tr>
 					<tr>
 						<td></td>
-						<td>2/03/2016</td>
-						<td>Reinicio Abrupto del servidor</td>
-						<td>No hay una respuesta contundente de la causa de esta falla por parte del Datacenter.</td>
+						<td>05/12/2017</td>
+						<td>Instalacion parche de seguridad KB4012212 como medida preventiva del cyber ataque a nivel mundial, adicionalmente se deshabilitó el servicio de SMB</td>
+						<td>Se implementan las actualizaciones de forma exitosa</td>
 					</tr>
 					<tr>
 						<td></td>
-						<td>7/04/2016</td>
-						<td>Cambio de nodo de la instancia JUPITERSQL\LOGICOM</td>
-						<td>Según informe de Datacenter el disco U generó un crash en la instancia motivo por el cual cambió de nodo</td>
+						<td>23/07/2017</td>
+						<td>Instalación de actualizaciones de sistema operativo</td>
+						<td>Se implementan las actualizaciones de forma exitosa</td>
 					</tr>
 	</table>
 	<center><button type="button" class="btn btn-secondary">Agregar Más</button></center>
