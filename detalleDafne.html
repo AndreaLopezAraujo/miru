@@ -31,6 +31,18 @@
 		};
 		var canvas = document.getElementById('chart').getContext('2d');
 		window.pie = new Chart(canvas, datos);
+		setInterval(function(){
+			datos.data.datasets.splice(0);
+			var newData = {
+				backgroundColor : [
+					"#F7464A",
+					"#46BFBD",
+				],
+				data : [95, 5]
+			};
+			datos.data.datasets.push(newData);
+			window.pie.update();
+		}, 5000);
 	});
 	</script>
 	<script type="text/javascript">
@@ -45,7 +57,7 @@
 						20,
 						19,
 						20,
-						25,
+						18,
 						21,
 						22,
 						20,
@@ -70,17 +82,18 @@
 		setInterval(function(){
 			datos.data.datasets.splice(0);
 			var newData = {
-				data : [18,
-						19,
+				data : [24,
+						22,
 						20,
 						19,
 						20,
-						21,
+						25,
 						21,
 						22,
-						21,
+						20,
 						23,
-						24, getRandom()],
+						20,
+						19,],
 						label: 'Temperatura',
 						backgroundColor: ["#F89B9D",],
 					borderColor:["#F7464A"],
@@ -88,9 +101,6 @@
 			datos.data.datasets.push(newData);
 			window.line.update();
 		}, 5000);
-		function getRandom(){
-			return Math.round(Math.random() *(29-24)+24);
-		}
 	});
 	</script>
 	<script>

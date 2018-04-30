@@ -12,8 +12,8 @@
 			data : {
 				datasets :[{
 					data : [
-						8,
-						2,
+						80,
+						20,
 					],
 					backgroundColor: [
 						"#F7464A",
@@ -38,14 +38,11 @@
 					"#F7464A",
 					"#46BFBD",
 				],
-				data : [8+getRandom(), 2+getRandom()]
+				data : [80, 20]
 			};
 			datos.data.datasets.push(newData);
 			window.pie.update();
 		}, 5000);
-		function getRandom(){
-			return Math.round(Math.random() *(5-1)+1);
-		}
 	});
 	</script>
 	<script type="text/javascript">
@@ -95,7 +92,8 @@
 						22,
 						21,
 						20,
-						19, getRandom()],
+						19,
+						18,],
 						label: 'Temperatura',
 						backgroundColor: ["#95CA8A",],
 					borderColor:["#68CA53"],
@@ -103,9 +101,6 @@
 			datos.data.datasets.push(newData);
 			window.line.update();
 		}, 5000);
-		function getRandom(){
-			return Math.round(Math.random() *(20-18)+18);
-		}
 	});
 	</script>
 	<script>
@@ -279,11 +274,11 @@ function show(shown, hidden, hidden2, hidden3) {
 							</tr>
 							<tr>
 								<td>Recomendaciones de mantenimiento</td>
-								<td>Se debe de tener presente que hubo un pico cerca del limite recomendado</td>
+								<td>Se debe tener presente que hubo un pico cerca del límite recomendado</td>
 							</tr>
 							<tr>
 								<td>Predicciones</td>
-								<td>Se espera que no se genere ninguna falla en los proximos dos años.</td>
+								<td>Se estima que la temperatura no tendrá valores de riesgo en el próximo mes</td>
 							</tr>
 						</tbody>
 					</table>
