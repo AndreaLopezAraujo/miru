@@ -52,7 +52,7 @@
 			data : {
 				datasets :[{
 					data : [
-						24,
+						19,
 						22,
 						20,
 						19,
@@ -66,8 +66,8 @@
 						19,
 					],
 					label: 'Temperatura',
-					backgroundColor: ["#F89B9D",],
-					borderColor:["#F7464A"],
+					backgroundColor: ["#95CA8A",],
+					borderColor:["#68CA53"],
 				}],
 				labels : [
 				'Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre',
@@ -82,12 +82,12 @@
 		setInterval(function(){
 			datos.data.datasets.splice(0);
 			var newData = {
-				data : [24,
+				data : [19,
 						22,
 						20,
 						19,
 						20,
-						25,
+						18,
 						21,
 						22,
 						20,
@@ -95,8 +95,8 @@
 						20,
 						19,],
 						label: 'Temperatura',
-						backgroundColor: ["#F89B9D",],
-					borderColor:["#F7464A"],
+					backgroundColor: ["#95CA8A",],
+					borderColor:["#68CA53"],
 			};
 			datos.data.datasets.push(newData);
 			window.line.update();
@@ -237,7 +237,7 @@ function show(shown, hidden, hidden2, hidden3) {
 				<div class="row">
 					<div class="col-sm">
 						<img src="img/okSinColor.jpeg" width="15" height="15">
-						<button type="button" class="btn" style="background-color: white; border-color: white;">Temperatura</button></a>
+						<button type="button" class="btn" style="background-color: white; border-color: white;" onclick="return show('Page2','Page4','Page5','Page3');">Temperatura</button></a>
 					</div>
 					<div class="col-sm">
 						<h1></h1>
@@ -274,11 +274,11 @@ function show(shown, hidden, hidden2, hidden3) {
 							</tr>
 							<tr>
 								<td>Recomendaciones de mantenimiento</td>
-								<td>Compruebe que la ventilación esté funcionando correctamente, consulte el uso de RAM</td>
+								<td></td>
 							</tr>
 							<tr>
 								<td>Predicciones</td>
-								<td>Se estima que los fallos continuarán con mayor frecuencia</td>
+								<td>Se estima que la temperatura continuará en intervalos seguros</td>
 							</tr>
 						</tbody>
 					</table>
