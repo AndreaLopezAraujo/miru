@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<script>
+	window.test = function(e) {
+		
+
+    if(e.value === "Correcto")
+    { var epicC = document.getElementsByName("correct");
+		
+		for(var i= 0; i<epicC.length ; i++)
+		{
+			epicC[i].style.display = "block"; ;
+		}
+		var epicw = document.getElementsByName("warning");
+		
+		for(var i= 0; i<epicw.length ; i++)
+		{
+			epicw[i].style.display = "none"; ;
+		}
+		var epicfail = document.getElementsByName("fail");
+		
+		for(var i= 0; i<epicfail.length ; i++)
+		{
+			epicfail[i].style.display = "none"; ;
+		}
+		
+		
+		var fila = document.getElementsByName("rows");
+		var c = 0;
+		var m = 0;
+		for (var i=0;i<epicC.length;i++)
+		{
+			fila[c].appendChild(epicC[i]);
+			m = m+1;
+			if(m ==4 )
+			{
+				c = c+1;
+				m = 0;
+			}
+		}
+		
+		
+    }
+    else if(e.value == "Fallos")
+    {
+		var epicC = document.getElementsByName("correct");
+		
+		for(var i= 0; i<epicC.length ; i++)
+		{
+			epicC[i].style.display = "none"; ;
+		}
+		var epicw = document.getElementsByName("warning");
+		
+		for(var i= 0; i<epicw.length ; i++)
+		{
+			epicw[i].style.display = "none"; ;
+		}
+		var epicfail = document.getElementsByName("fail");
+		
+		for(var i= 0; i<epicfail.length ; i++)
+		{
+			epicfail[i].style.display = "block"; ;
+		}
+
+		var fila = document.getElementsByName("rows");
+		var c = 0;
+		var m = 0;
+		for (var i=0;i<epicfail.length;i++)
+		{
+			fila[c].appendChild(epicfail[i]);
+			m = m+1;
+			if(m ==4 )
+			{
+				c = c+1;
+				m = 0;
+			}
+		}
+    }
+    else if(e.value == "Advertencia")
+    {
+		var epicC = document.getElementsByName("correct");
+		
+		for(var i= 0; i<epicC.length ; i++)
+		{
+			epicC[i].style.display = "none"; ;
+		}
+		var epicw = document.getElementsByName("warning");
+		
+		for(var i= 0; i<epicw.length ; i++)
+		{
+			epicw[i].style.display = "block"; ;
+		}
+		var epicfail = document.getElementsByName("fail");
+		
+		for(var i= 0; i<epicfail.length ; i++)
+		{
+			epicfail[i].style.display = "none"; ;
+		}
+		
+        var fila = document.getElementsByName("rows");
+		var c = 0;
+		var m = 0;
+		for (var i=0;i<epicw.length;i++)
+		{
+			fila[c].appendChild(epicw[i]);
+			m = m+1;
+			if(m ==4 )
+			{
+				c = c+1;
+				m = 0;
+			}
+		}
+    }
+	    else if(e.value== "Todos")
+    {
+			var epicC = document.getElementsByName("correct");
+		
+		for(var i= 0; i<epicC.length ; i++)
+		{
+			epicC[i].style.display = "block"; ;
+		}
+		var epicw = document.getElementsByName("warning");
+		
+		for(var i= 0; i<epicw.length ; i++)
+		{
+			epicw[i].style.display = "block"; ;
+		}
+		var epicfail = document.getElementsByName("fail");
+		
+		for(var i= 0; i<epicfail.length ; i++)
+		{
+			epicfail[i].style.display = "block"; ;
+		}
+		
+    }
+};
+</script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0">
+	<title>MIRU</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+</head>
+
+<body>
+	<!---Barra navegadora-->
+	<nav class="navbar navbar-expand-lg navbar-light " style="background-color: #1E3847;">
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01"
+			aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+		<div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+			<a class="navbar-brand" href="#" style="color: white;">
+				<img src="img/captura.png" width="45" height="40" class="d-inline-block align-top" alt=""></a>
+			<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+				<li class="nav-item active">
+					<a class="nav-link" href="#" style="color: white;">Servidores <span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#" style="color: white;" onclick="window.location.href='vistaGlobal.html'">Vista global</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#" onclick="window.location.href='ayuda.html'" style="color: white;">Ayuda</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#" onclick="window.location.href='index.html'" style="color: white;">Salir</a>
+				</li>
+			</ul>
+			<form class="form-inline my-2 my-lg-0">
+				<input class="form-control mr-sm-2" placeholder="Nombre o id">
+			</form>
+			<button class="btn" onclick="window.location.href='detalle.html'" style="border-color: white; background-color: #1E3847; color: white">Buscar</button>
+		</div>
+	</nav>
+	<!---letrero-->
+	<div class="row">
+			<div class="col-sm">
+	<h5 style="color: white;">hola</h5>
+	<div class="container">
+	<div class="row">
+			<div class="col-sm">
+		<h1>ALTIPAL</h1>
+		</div>
+		<div class="col-sm2">
+		<h4>Seleccionar Filtro  </h4>
+		</div>
+		<div class="col-sm2">
+<select name="escoger" onchange="test(this);">
+ <option selected = "selected">Select an Option</option>
+
+  <option value="Correcto">Funcionamento Correcto</option>
+  <option value="Fallos">Fallos</option>
+  <option value="Advertencia">Advertencia</option>
+  <option value="Todos">Todos</option>
+</select>	
+</div>
+	</div>
+	<h5 style="color: white;">hola</h5>
+	<!---Anuncios-->
+	<div class="container">
+		<div class="row">
+			<div class="col-sm">
+				<center><img src="img/okSincolor.jpeg" width="40" height="40"></a>
+				</center>
+			</div>
+			<div class="col-sm">
+				<center><img src="img/warningSinColor.jpeg" width="42" height="40"></a>
+				</center>
+			</div>
+			<div class="col-sm">
+				<center><img src="img/errorSinColor.jpeg" width="42" height="40"></a>
+				</center>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm">
+				<center>Sistema funcionando correctamente</center>
+			</div>
+			<div class="col-sm">
+				<center> Puede presentarse un problema a futuro</center>
+			</div>
+			<div class="col-sm">
+				<center>Se encuentran fallos en el sistema</center>
+			</div>
+		</div>
+		<h1 style="color: white;">hola</h1>
+		<!---planeles-->
+		<div class="row" name = "rows">
+		
+			<div class="col-sm-3" name = "fail">
+			
+				<div class="tooltip-wrap" >
+				<div class="card border-danger mb-3">
+					<center>
+						<div class="card-header" style="background-color:#F2DEDE">
+							<img src="img/errorColor.jpeg" width="35" height="30" >
+						</div>
+						<div class="card-body" >
+							<h5 class="card-title">PLUTON</h5>
+							<p>AWF0006</p>
+						</div>
+						<div class="tooltip-content">
+							<h6 style="color:white;">espacio</h6>
+							<div class="row ">
+								<div class="col-sm-4 ">
+   				 	<img align="right" src="img/errorSinColor.jpeg " class="btn-xs ">
+							</div>
+							<div class="col-sm-8 ">
+								<p align="left"><b>Temperatura</b></p>
+								</div>
+							</div>
+							<div class="row ">
+								<div class="col-sm-4 ">
+   				 	<img align="right" src="img/warningSinColor.jpeg " class="btn-xs ">
+							</div>
+							<div class="col-sm-8 ">
+								<p align="left"><b>Garantía</b></p>
+								</div>
+							</div>
+							<center>
+   				 	<button class="btn " style="background-color:light-gray; " onclick="window.location.href='detallePluton.html' ">Ver detalles</button>
+							</center>
+  				</div> 
+						</div>
+				</div>
+			
+
+		</div>
+<div class="col-sm-3" name = "correct">
+				<div class="tooltip-wrap" >
+				<div class="card border-success mb-3">
+					<center>
+						<div class="card-header" style="background-color:#DFF0D8">
+							<img src="img/okColor.jpeg" width="35" height="30">
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">JUPITER</h5>
+							<p>AWF0004</p>
+						</div>
+						<div class="tooltip-content">
+							<h6 style="color:white;">espacio</h6>
+							<p><b>Funcionamiento correcto</b></p>
+							<center>
+   				 	<button class="btn " style="background-color:light-gray;">Ver detalles</button>
+							</center>
+  				</div> 
+						</div>
+				</div>
+			</div>
+			<div class="col-sm-3" name = "fail">
+				<div class="tooltip-wrap" >
+				<div class="card border-danger mb-3">
+					<center>
+						<div class="card-header" style="background-color:#F2DEDE">
+							<img src="img/errorColor.jpeg" width="35" height="30">
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">SATURNO</h5>
+							<p>AWF0003</p>
+						</div>
+						<div class="tooltip-content">
+							<h6 style="color:white;">espacio</h6>
+							<div class="row ">
+								<div class="col-sm-4 ">
+   				 	<img align="right" src="img/errorSinColor.jpeg " class="btn-xs ">
+							</div>
+							<div class="col-sm-8 ">
+								<p align="left"><b>Temperatura</b></p>
+								</div>
+							</div>
+							<center>
+   				 	<button class="btn " style="background-color:light-gray;  " onclick="window.location.href='detalleSaturno.html'  " >Ver detalles</button>
+							</center>
+  				</div> 
+						</div>
+				</div>
+			</div>
+			<div class="col-sm-3" name = "warning">
+				<div class="tooltip-wrap" >
+				<div class="card border-warning mb-3">
+					<center>
+						<div class="card-header" style="background-color:#FCF8E3">
+							<img src="img/warningColor.jpeg" width="35" height="30">
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">DAFNE</h5>
+							<p>AWF0033</p>
+						</div>
+						<div class="tooltip-content">
+							<h6 style="color:white;">espacio</h6>
+							<div class="row ">
+								<div class="col-sm-4 ">
+   				 	<img align="right" src="img/warningSinColor.jpeg " class="btn-xs ">
+							</div>
+							<div class="col-sm-8 ">
+								<p align="left"><b>Disco Duro</b></p>
+								</div>
+							</div>
+							<center>
+   				 	<button class="btn " style="background-color:light-gray;  " onclick="window.location.href='detalleDafne.html'" >Ver detalles</button>
+							</center>
+  				</div> 
+						</div>
+				</div>
+			</div>
+		</div>
+		<!---planeles2-->
+		<div class="row" name = "rows">
+				<div class="col-sm-3" name = "warning">
+				<div class="tooltip-wrap" >
+				<div class="card border-warning mb-3">
+					<center>
+						<div class="card-header" style="background-color:#FCF8E3">
+							<img src="img/warningColor.jpeg" width="35" height="30">
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">ATLAS</h5>
+							<p>AWF0034</p>
+						</div>
+						<div class="tooltip-content">
+							<h6 style="color:white;">espacio</h6>
+							<div class="row ">
+								<div class="col-sm-4 ">
+   				 	<img align="right" src="img/warningSinColor.jpeg " class="btn-xs ">
+							</div>
+							<div class="col-sm-8 ">
+								<p align="left"><b>Temperatura</b></p>
+								</div>
+							</div>
+							<center>
+   				 	<button class="btn " style="background-color:light-gray; ">Ver detalles</button>
+							</center>
+  				</div> 
+						</div>
+				</div>
+			</div>
+			<div class="col-sm-3" name = "correct">
+				<div class="tooltip-wrap" >
+				<div class="card border-success mb-3">
+					<center>
+						<div class="card-header" style="background-color:#DFF0D8">
+							<img src="img/okColor.jpeg" width="35" height="30">
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">PROMETEO</h5>
+							<p>AWF0021</p>
+						</div>
+						<div class="tooltip-content">
+							<h6 style="color:white;">espacio</h6>
+							<p><b>Funcionamiento correcto</b></p>
+							<center>
+   				 	<button class="btn " style="background-color:light-gray;">Ver detalles</button>
+							</center>
+  				</div> 
+						</div>
+				</div>
+			</div>
+			<div class="col-sm-3" name = "fail" >
+				<div class="tooltip-wrap" >
+				<div class="card border-danger mb-3">
+					<center>
+						<div class="card-header" style="background-color:#F2DEDE">
+							<img src="img/errorColor.jpeg" width="35" height="30">
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">PANDORA</h5>
+							<p>AWF0022</p>
+						</div>
+						<div class="tooltip-content">
+							<h6 style="color:white;">espacio</h6>
+							<div class="row ">
+								<div class="col-sm-4 ">
+   				 	<img align="right" src="img/errorSinColor.jpeg " class="btn-xs ">
+							</div>
+							<div class="col-sm-8 ">
+								<p align="left"><b>Temperatura</b></p>
+								</div>
+							</div>
+							<center>
+   				 	<button class="btn " style="background-color:light-gray; " >Ver detalles</button>
+							</center>
+  				</div> 
+						</div>
+				</div>
+			</div>
+			<div class="col-sm-3" name = "correct">
+				<div class="tooltip-wrap" >
+				<div class="card border-success mb-3">
+					<center>
+						<div class="card-header" style="background-color:#DFF0D8">
+							<img src="img/okColor.jpeg" width="35" height="30">
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">WATCHMEN</h5>
+							<p>AWF0020</p>
+						</div>
+						<div class="tooltip-content">
+							<h6 style="color:white;">espacio</h6>
+							<p><b>Funcionamiento correcto</b></p>
+							<center>
+   				 	<button class="btn " style="background-color:light-gray;">Ver detalles</button>
+							</center>
+  				</div> 
+						</div>
+				</div>
+			</div>
+		</div>
+		<!---planeles3-->
+		<div class="row" name = "rows">
+				<div class="col-sm-3" name = "correct">
+				<div class="tooltip-wrap">
+				<div class="card border-success mb-3">
+					<center>
+						<div class="card-header" style="background-color:#DFF0D8">
+							<img src="img/okColor.jpeg" width="35" height="30">
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">TIERRA</h5>
+							<p>AWF009</p>
+						</div>
+						<div class="tooltip-content">
+							<h6 style="color:white;">espacio</h6>
+							<p><b>Funcionamiento correcto</b></p>
+							<center>
+   				 	<button class="btn " style="background-color:light-gray; ">Ver detalles</button>
+							</center>
+  				</div> 
+						</div>
+				</div>
+			</div>
+			<div class="col-sm-3" name = "correct">
+				<div class="tooltip-wrap">
+				<div class="card border-success mb-3">
+					<center>
+						<div class="card-header" style="background-color:#DFF0D8">
+							<img src="img/okColor.jpeg" width="35" height="30">
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">MARTE</h5>
+							<p>AWF0007</p>
+						</div>
+						<div class="tooltip-content">
+							<h6 style="color:white;">espacio</h6>
+							<p><b>Funcionamiento correcto</b></p>
+							<center>
+   				 	<button class="btn " style="background-color:light-gray;">Ver detalles</button>
+							</center>
+  				</div> 
+						</div>
+				</div>
+			</div>
+			<div class="col-sm-3" name = "warning">
+				<div class="tooltip-wrap" >
+				<div class="card border-warning mb-3">
+					<center>
+						<div class="card-header" style="background-color:#FCF8E3">
+							<img src="img/warningColor.jpeg" width="35" height="30">
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">ERIS</h5>
+							<p>AWF006</p>
+						</div>
+						<div class="tooltip-content">
+							<h6 style="color:white;">espacio</h6>
+							<div class="row ">
+								<div class="col-sm-4 ">
+   				 	<img align="right" src="img/warningSinColor.jpeg " class="btn-xs ">
+							</div>
+							<div class="col-sm-8 ">
+								<p align="left"><b>Disco duro</b></p>
+								</div>
+							</div>
+							<center>
+   				 	<button class="btn " style="background-color:light-gray; " >Ver detalles</button>
+							</center>
+  				</div> 
+						</div>
+				</div>
+			</div>
+			<div class="col-sm-3" name = "fail">
+				<div class="tooltip-wrap" >
+				<div class="card border-danger mb-3">
+					<center>
+						<div class="card-header" style="background-color:#F2DEDE">
+							<img src="img/errorColor.jpeg" width="35" height="30">
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">URANO</h5>
+							<p>AWF0010</p>
+						</div>
+						<div class="tooltip-content">
+							<h6 style="color:white;">espacio</h6>
+							<div class="row ">
+								<div class="col-sm-4 ">
+   				 	<img align="right" src="img/errorSinColor.jpeg " class="btn-xs ">
+							</div>
+							<div class="col-sm-8 ">
+								<p align="left"><b>Bateria</b></p>
+								</div>
+							</div>
+							<center>
+   				 	<button class="btn " style="background-color:light-gray;">Ver detalles</button>
+							</center>
+  				</div> 
+						</div>
+				</div>
+			</div>
+		</div>
+		<!---planeles4-->
+		<div class="row" name = "rows">
+				<div class="col-sm-3" name = "fail" >
+				<div class="tooltip-wrap" >
+				<div class="card border-danger mb-3">
+					<center>
+						<div class="card-header" style="background-color:#F2DEDE">
+							<img src="img/errorColor.jpeg" width="35" height="30">
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">TRITON</h5>
+							<p>AWF0024</p>
+						</div>
+						<div class="tooltip-content">
+							<h6 style="color:white;">espacio</h6>
+							<div class="row ">
+								<div class="col-sm-4 ">
+   				 	<img align="right" src="img/errorSinColor.jpeg " class="btn-xs ">
+							</div>
+							<div class="col-sm-8 ">
+								<p align="left"><b>Garantia</b></p>
+								</div>
+							</div>
+							<center>
+   				 	<button class="btn " style="background-color:light-gray; ">Ver detalles</button>
+							</center>
+  				</div> 
+						</div>
+				</div>
+			</div>
+			<div class="col-sm-3" name = "fail">
+				<div class="tooltip-wrap" >
+				<div class="card border-danger mb-3">
+					<center>
+						<div class="card-header" style="background-color:#F2DEDE">
+							<img src="img/errorColor.jpeg" width="35" height="30">
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">CERES</h5>
+							<p>AWF0007</p>
+						</div>
+						<div class="tooltip-content">
+							<h6 style="color:white;">espacio</h6>
+							<div class="row ">
+								<div class="col-sm-4 ">
+   				 	<img align="right" src="img/errorSinColor.jpeg " class="btn-xs ">
+							</div>
+							<div class="col-sm-8 ">
+								<p align="left"><b>Temperatura</b></p>
+								</div>
+							</div>
+							<center>
+   				 	<button class="btn " style="background-color:light-gray;">Ver detalles</button>
+							</center>
+  				</div> 
+						</div>
+				</div>
+			</div>
+			<div class="col-sm-3" name = "correct" >
+				<div class="tooltip-wrap">
+				<div class="card border-success mb-3">
+					<center>
+						<div class="card-header" style="background-color:#DFF0D8">
+							<img src="img/okColor.jpeg" width="35" height="30">
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">CALDONA</h5>
+							<p>AWF0032</p>
+						</div>
+						<div class="tooltip-content">
+							<h6 style="color:white;">espacio</h6>
+							<p><b>Funcionamiento correcto</b></p>
+							<center>
+   				 	<button class="btn " style="background-color:light-gray; " >Ver detalles</button>
+							</center>
+  				</div> 
+						</div>
+				</div>
+			</div>
+			<div class="col-sm-3 " name = "correct">
+				<div class="tooltip-wrap" 
+				<div class="card border-success mb-3">
+					<center>
+						<div class="card-header" style="background-color:#DFF0D8">
+							<img src="img/okColor.jpeg" width="35" height="30">
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">MAKERMEKE</h5>
+							<p>AWF0027</p>
+						</div>
+						<div class="tooltip-content">
+							<h6 style="color:white;">espacio</h6>
+							<p><b>Funcionamiento correcto</b></p>
+							<center>
+   				 	<button class="btn " style="background-color:light-gray;">Ver detalles</button>
+							</center>
+  				</div> 
+						</div>
+				</div>
+			</div>
+	</div>
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/popper.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
